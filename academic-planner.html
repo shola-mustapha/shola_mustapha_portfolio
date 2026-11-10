@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Academic Planner | Shola Mustapha</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="projects.html">Projects</a><a href="contact.html">Contact</a
+        ><a class="active" href="academic-planner.html">Academic Planner</a>
+      </nav>
+    </header>
+    <main class="wrap">
+      <section class="page-intro">
+        <p class="eyebrow">PERSONAL ORGANISATION</p>
+        <h1>Keep track.<br /><em>Stay on course.</em></h1>
+        <p class="lead">
+          A simple place to record tasks, set due dates and keep track of what
+          is finished.
+        </p>
+      </section>
+      <section class="planner">
+        <div class="stats">
+          <div><small>TOTAL TASKS</small><b id="totalCount">0</b></div>
+          <div><small>COMPLETED</small><b id="doneCount">0</b></div>
+          <div><small>TO DO</small><b id="todoCount">0</b></div>
+        </div>
+        <form id="taskForm">
+          <input type="hidden" id="taskId" /><label
+            >Task name<input
+              id="taskTitle"
+              maxlength="100"
+              placeholder="e.g. Practise HTML forms"
+              required /></label
+          ><label>Due date<input id="taskDue" type="date" /></label
+          ><label class="wide"
+            >Notes (optional)<input
+              id="taskNotes"
+              placeholder="Add a short note"
+          /></label>
+          <div class="wide">
+            <button class="button lime" id="saveTask">Add task +</button>
+            <button class="button hidden" id="cancelEdit" type="button">
+              Cancel edit
+            </button>
+          </div>
+        </form>
+        <div class="toolbar">
+          <div>
+            <button class="filter active" data-filter="all">All</button
+            ><button class="filter" data-filter="active">To do</button
+            ><button class="filter" data-filter="completed">Completed</button>
+          </div>
+          <small id="taskCountLabel">0 tasks</small>
+        </div>
+        <div id="taskList" class="task-list">
+          <p class="empty">No tasks yet. Add your first task above.</p>
+        </div>
+        <p class="muted">Tasks are saved in this browser on this device.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <strong>SHOLA MUSTAPHA</strong><span>Web Design &amp; Exploration</span
+      ><small>© 2026 Shola Mustapha. All rights reserved.</small>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
